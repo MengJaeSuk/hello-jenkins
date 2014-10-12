@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+import os
+
+os.system('sudo apt-get install g++ curl libssl-dev apache2-utils')
+os.system('sudo apt-get install python')
+os.system('sudo apt-get install build-essential')
+os.system('sudo apt-get install gcc')
+os.system('sudo apt-get install g++')
+os.system('sudo apt-get install git-core')
+os.system('git clone git://github.com/joyent/node.git')
+os.system('cd node')
+os.system('git checkout v0.10.32')
+os.system('mkdir ~/local')
+os.system('./configure --prefix=$HOME/local/node')
+os.system('make')
+os.system('sudo make install')
+os.system('export PATH=”$HOME/local/node/bin:$PATH”')
+os.system('export NODE_PATH=”$HOME/local/node:$HOME/local/node/lib/node_modules”')
+os.system('npm install express -gd')
+os.system('sudo npm install -g express-generator')
