@@ -1,3 +1,2 @@
 #!/bin/sh
-cd ../../
-./test/test.js
+../../test/test.js
